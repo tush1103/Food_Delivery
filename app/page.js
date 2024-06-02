@@ -1,16 +1,22 @@
-import Link from "next/link";
-
-export default function Home() {
+import Link from 'next/link'
+import classes from './page.module.css'
+export default function Home () {
   return (
-    <main>
-      <h1 style={{ color: 'white', textAlign: 'center' }}>
-        Time to get started!
-      </h1>
-      <p><Link href="/meals">Meals</Link></p>
-      <p><Link href="/meals/share">ShareMealPage</Link></p>
-      <p><Link href="/community">CommunityPage</Link></p>
-      <p><Link href="/meals/meal1">Meal1</Link></p>
-      <p><Link href="/meals/meal2">Meal2</Link></p>
-    </main>
-  );
+    <>
+      <header className={classes.header}>
+        <div className={classes.slideshow}></div>
+        <div>
+          <div className={classes.hero}>
+            <h1>NextLevel Food for NextLevel foodies</h1>
+            <p>Taste & share food from all over the world</p>
+          </div>
+          <div className={classes.cta}>
+            <Link href='/community'>Join the community</Link>
+            <Link href='/meals'>Explore Meals</Link>
+          </div>
+        </div>
+      </header>
+      <main></main>
+    </>
+  )
 }

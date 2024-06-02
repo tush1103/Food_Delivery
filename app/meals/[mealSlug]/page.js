@@ -1,5 +1,5 @@
-export default function Meal({params}){
+export default function Meal(){
     return(
-        <main>{params.slug}</main>
+        <main>Meal details</main>
     )
 }
